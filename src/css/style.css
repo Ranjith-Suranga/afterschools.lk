@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+
+*{
+    font-family: 'PT Sans', 'Arial', sans-serif;
+}
+
+body{
+    background: #3C90B5 url(../../assets/bg.jpg) fixed 0 0;
+}
+
+.container{
+
+}
+
+header{
+    padding: 10px;
+}
+
+main>div.container{
+    padding-top: 10px;
+    background-color: white;
+}
+
+header,footer{
+    background-color: #333333;
+    color: white;
+}
+
+.main-nav-box{
+    background-color: #3C90B5;
+    padding: 30px 0;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+footer{
+    padding: 30px 0;
+}
+
+#ft-logo-container{
+    border-left: 1px solid #9b9b9b;
+}
+
+#ft-logo-container>*{
+    padding-left: 20px;
+}
