@@ -25,10 +25,10 @@ function loadSubjects(){
             var subject = subjects[index];
 
             if ($("#cmbQualification").val() == "all"){
-                $("#ulQualifications").append("<li>" +  subject.subject + "</li>");
+                $("#ulQualifications").append("<li><a href=\"ol-" + subject.subject +".html\">" +  subject.subject + "</a></li>");
             }else{
                 if (subject.tag === $("#cmbQualification").val()){
-                    $("#ulQualifications").append("<li>" +  subject.subject + "</li>");
+                    $("#ulQualifications").append("<li><a href=\"ol-" + subject.subject +".html\">" +  subject.subject + "</a></li>");
                 }
             }
         }
