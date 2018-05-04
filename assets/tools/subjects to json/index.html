@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert to JSON</title>
+</head>
+<body>
+    Category: <br>
+    <input id="txtCategory">
+    <br>
+    Subects: <br>
+    <textarea id="txtSubjects" cols="60" rows="20"></textarea>
+    <br>
+    <button id="btnConvert" type="button">Convert to JSON</button>
+    <br>
+    Output: <br>
+    <textarea id="txtOutput" cols="60" rows="20"></textarea>
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $("#btnConvert").click(function(){
+
+            var noDigitsText =($("#txtSubjects").val().replace(/\(\d+\)/gim,""));
+            var splittedText = (noDigitsText.split("\n"));
+
+            var jsonArray = [];
+
+            for(var index in splittedText){
+                var text = splittedText[index].trim();
+
+                jsonArray.push(new SubjectObj(text));
+            }
+
+            $("#txtOutput").val((JSON.stringify(jsonArray)));
+
+        });
+
+        function SubjectObj(subject){
+            this.tag = $("#txtCategory").val();
+            this.subject = subject;
+        }
+
+    </script>
+</body>
+</html>

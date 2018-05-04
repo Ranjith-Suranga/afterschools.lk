@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Afterschools.lk - Home Page</title>
-    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/ol.css">
 </head>
 <body>
-
 <header>
     <div class="container">
         <div class="row">
@@ -39,30 +39,46 @@
                 </div>
             </div>
 
-            <div id="content" class="col col-12 col-lg-10">
+            <div id="content" class="col col-12 col-lg-8">
                 <!-- Content change with the page here-->
-                <h1>Ordinary Level Subjects</h1>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam blanditiis consectetur
-                    dolores doloribus ea esse et eum, incidunt ipsa necessitatibus nesciunt quasi rem reprehenderit
-                    tenetur unde velit voluptas voluptatum?
-                </div>
-                <div>Blanditiis, culpa deserunt distinctio ducimus eos facilis, iusto minus nihil non, perspiciatis
-                    repudiandae vitae voluptate voluptates! Adipisci autem, dignissimos dolorum ea, eos eum explicabo
-                    facilis, hic labore laboriosam ratione tempore.
-                </div>
-                <div>Ab ad adipisci asperiores autem beatae deleniti dicta dolore dolorem dolorum eos, ex impedit in
-                    inventore iste laudantium maxime minus nam nihil nostrum pariatur perferendis quae quo quos velit
-                    voluptatum?
-                </div>
-                <div>A commodi consequatur distinctio dolore enim eveniet facilis fugit illum ipsam itaque labore maxime
-                    molestias nisi nobis odit quaerat qui, quo repellendus rerum sint tempore temporibus unde voluptate
-                    voluptatem voluptates.
-                </div>
-                <div>Aliquam aspernatur aut culpa dignissimos distinctio earum ex hic impedit iusto, molestias mollitia
-                    nam officiis optio quaerat quas sint voluptas. Ab accusamus doloremque enim expedita facilis,
-                    laboriosam maxime tempora unde?
-                </div>
+                <h1>Cambridge International - Ordinary Level</h1>
+                <p>Please select a subject from the list below:</p>
+                <p class="form-group">
+                    <label>
+                        Show me qualifications in:
+                    </label>
+                    <select id="cmbQualification" class="form-control">
+                        <option value="all">All subject areas</option>
+                        <option value="english">English</option>
+                        <option value="humanities">Humanities</option>
+                        <option value="languages">Languages</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="science">Science</option>
+                        <option value="social sciences">Social Sciences</option>
+                        <option value="technology">Technology</option>
+                        <option value="arts">The Arts</option>
+                    </select>
+                </p>
+                <hr>
+                <ul id="ulQualifications">
+
+                </ul>
                 <!-- # No more changes -->
+            </div>
+
+            <div id="advertisement" class="col col-12 col-lg-2">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate doloremque enim est
+                    exercitationem fuga laboriosam maiores minima nisi nostrum quos saepe sed similique, vero
+                    voluptatem! Aliquid, distinctio nesciunt! Labore!
+                </div>
+                <div>Accusantium ad consequuntur cumque cupiditate, facere illum in natus perferendis veritatis! Animi
+                    corporis iusto nobis quam reiciendis sunt. Beatae culpa dolore eos excepturi iure maxime, quis vero?
+                    Assumenda commodi, eligendi.
+                </div>
+                <div>Accusantium ad consequuntur cumque cupiditate, facere illum in natus perferendis veritatis! Animi
+                    corporis iusto nobis quam reiciendis sunt. Beatae culpa dolore eos excepturi iure maxime, quis vero?
+                    Assumenda commodi, eligendi.
+                </div>
             </div>
         </div>
     </div>
@@ -97,5 +113,6 @@
     </div>
 </footer>
 <script src="dist/js/main.bundle.js"></script>
+<script src="dist/js/ol.bundle.js"></script>
 </body>
 </html>
