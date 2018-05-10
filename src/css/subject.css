@@ -1,14 +1,23 @@
+.hide{
+    display: none;
+}
+
 #main-tabs{
     margin-top: 20px;
 }
 
 #exam-years-container{
     padding-top: 10px;
+    padding-left: 10px;
     padding-bottom: 10px;
 }
 
 #exam-years-container span{
     padding: 10px;
+}
+
+#exam-papers>div{
+    margin-bottom: 20px;
 }
 
 .pdf-icon{
