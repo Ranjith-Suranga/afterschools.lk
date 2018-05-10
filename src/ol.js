@@ -13,7 +13,7 @@ $(document).ready(function(){
 function loadSubjects(){
     $.ajax({
         method:"GET",
-        url:"dist/js/subject-db.json",
+        url:"dist/js/ol-subject-db.json",
         async:true,
         dataType: "json"
     }).done(function(response){

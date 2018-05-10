@@ -1,13 +1,26 @@
+.hide{
+    display: none;
+}
+
 #main-tabs{
     margin-top: 20px;
 }
 
 #exam-years-container{
     padding-top: 10px;
+    padding-left: 10px;
     padding-bottom: 10px;
 }
 
 #exam-years-container span{
+    padding: 10px;
+}
+
+#exam-papers>div{
+    margin-bottom: 20px;
+}
+
+#books-resources{
     padding: 10px;
 }
 
@@ -22,4 +35,6 @@
 .group-paper{
     padding-left: 10px;
 }
+
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3Mvc3ViamVjdC5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
