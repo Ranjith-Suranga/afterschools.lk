@@ -6,6 +6,7 @@ module.exports = {
     entry:{
         main: "./src/main.js",
         ol:"./src/ol.js",
+        al:"./src/al.js",
         subject:"./src/subject.js"
     },
     output: {
