@@ -13,3 +13,9 @@ $(".main-nav-box").click(function(){
             break;
     }
 });
+
+$("footer>div>div>div>span:last-child").click(function(){
+   $("html,body").animate({
+       scrollTop: "0px"
+   },300);
+});
