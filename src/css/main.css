@@ -21,11 +21,11 @@ header{
     padding: 10px;
 }
 
-#title a{
+#title a, #ft-logo-container h1 a{
     color: white !important;
 }
 
-#title a:hover{
+#title a:hover, #ft-logo-container h1 a{
     text-decoration: none;
 }
 
