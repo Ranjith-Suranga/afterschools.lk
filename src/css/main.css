@@ -96,6 +96,10 @@ footer>div>div>div>span:last-child{
     cursor: pointer;
 }
 
+.hide{
+    display: none;
+}
+
 @media all and (max-width: 768px){
 
     header h1, #hdr-social-media-container{

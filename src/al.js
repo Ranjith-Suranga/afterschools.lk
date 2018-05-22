@@ -1,4 +1,5 @@
 import "./css/al.css";
+import "./css/loader.css"
 
 $("#cmbQualification").change(function(){
 
@@ -11,6 +12,7 @@ $(document).ready(function(){
 })
 
 function loadSubjects(){
+    $("#loader-container").removeClass("hide");
     $.ajax({
         method:"GET",
         url:"dist/js/al-subject-db.json",
@@ -19,6 +21,7 @@ function loadSubjects(){
     }).done(function(response){
         var subjects = (response);
 
+        $("#loader-container").addClass("hide");
         $("#ulQualifications li").remove();
 
         for(var index in subjects){

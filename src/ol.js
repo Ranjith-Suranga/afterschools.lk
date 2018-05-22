@@ -1,4 +1,5 @@
 import './css/ol.css';
+import './css/loader.css'
 
 $("#cmbQualification").change(function(){
 
@@ -11,12 +12,15 @@ $(document).ready(function(){
 })
 
 function loadSubjects(){
+    $("#loader-container").removeClass("hide");
     $.ajax({
         method:"GET",
         url:"dist/js/ol-subject-db.json",
         async:true,
         dataType: "json"
     }).done(function(response){
+
+        $("#loader-container").addClass("hide");
         var subjects = (response);
 
         $("#ulQualifications li").remove();
