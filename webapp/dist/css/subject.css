@@ -57,5 +57,13 @@
     transform: translateX(-50%) translateY(100%);
 }
 
+@media all and (max-width: 330px){
+
+    .nav-link.active::after{
+        display: none;
+    }
+
+}
+
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3Mvc3ViamVjdC5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

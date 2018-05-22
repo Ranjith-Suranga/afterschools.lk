@@ -57,3 +57,11 @@
     transform: translateX(-50%) translateY(100%);
 }
 
+@media all and (max-width: 330px){
+
+    .nav-link.active::after{
+        display: none;
+    }
+
+}
+
