@@ -13,6 +13,8 @@ $(document).ready(function(){
 
 function loadSubjects(){
     $("#loader-container").removeClass("hide");
+    $("#ulQualifications").addClass("hide");
+
     $.ajax({
         method:"GET",
         url:"dist/js/ol-subject-db.json",
@@ -21,6 +23,7 @@ function loadSubjects(){
     }).done(function(response){
 
         $("#loader-container").addClass("hide");
+        $("#ulQualifications").removeClass("hide");
         var subjects = (response);
 
         $("#ulQualifications li").remove();
