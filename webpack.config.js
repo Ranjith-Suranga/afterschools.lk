@@ -4,10 +4,10 @@ const webpack = require('webpack');
 
 module.exports = {
     entry:{
-        main: "./src/main.js",
-        ol:"./src/ol.js",
-        al:"./src/al.js",
-        subject:"./src/subject.js"
+        main: "./src/main.ts",
+        ol:"./src/ol.ts",
+        al:"./src/al.ts",
+        subject:"./src/subject.ts"
     },
     output: {
         filename: "[name].bundle.js",
@@ -50,14 +50,20 @@ module.exports = {
                         outputPath: "../fonts/"
                     }
                 }
+            },
+            {
+                test:/\.ts$/,
+                use:{
+                    loader: "ts-loader"
+                }
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("../css/[name].css"),
-        new webpack.ProvidePlugin({
-            $:"jquery",
-            jQuery:"jquery"
-        })
+        new ExtractTextPlugin("../css/[name].css")
+        // new webpack.ProvidePlugin({
+        //     $:"jquery",
+        //     jQuery:"jquery"
+        // })
     ]
 }

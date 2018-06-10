@@ -1,18 +1,21 @@
 import './css/subject.css';
 
+import $ from 'jquery';
+
 // Not the best way to handle routing, but here we go
 
-$(document).ready(function () {
+$(document).ready( ()=> {
     if (window.location.href.indexOf("#") != -1) {
-        navgiate(window.location.href.match(/#.+/)[0]);
+        let location = window.location.href.match(/#.+/)![0];
+        navgiate(location);
     }
 });
 
 $("#main-tabs .nav-link").click(function (event) {
-    navgiate($(this).attr("href"))
+    navgiate(<string>$(this).attr("href"));
 });
 
-function navgiate(location) {
+function navgiate(location: string): void {
 
     $("#tab-content>div").addClass("hide");
     $("#main-tabs .nav-item a").removeClass("active");
@@ -39,12 +42,12 @@ function navgiate(location) {
     }
 }
 
-function defaultNavigation(){
+function defaultNavigation() : void{
     $("#main-tabs .nav-item:first-child a").addClass("active");
     $("#exam-papers").removeClass("hide");
 }
 
-function handleDisbable(selector) {
+function handleDisbable(selector: string) : boolean {
     if ($(selector).hasClass("disabled")) {
         defaultNavigation();
         return false;
@@ -54,12 +57,13 @@ function handleDisbable(selector) {
     }
 }
 
-$(".exam-year").click(function (event) {
+$(".exam-year").click( function (event) {
     event.preventDefault();
-
-    var div = $($(this).attr("href"));
+    
+    let div =  $($(this).attr("href"));
 
     $("html, body").animate({
-        scrollTop: div.offset().top
+        scrollTop: div.offset()!.top,
     }, 500);
+
 });

@@ -1,7 +1,7 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/main.css';
 
-import 'jquery';
+import $ from 'jquery';
 
 $(".main-nav-box").click(function(){
     switch ($(this).find("h2").text()){

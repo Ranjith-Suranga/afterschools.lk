@@ -1,17 +1,18 @@
 import "./css/al.css";
 import "./css/loader.css"
+import $ from 'jquery'
 
-$("#cmbQualification").change(function(){
+$("#cmbQualification").change(()=>{
 
     loadSubjects();
 
 });
 
-$(document).ready(function(){
+$(document).ready(()=>{
     loadSubjects();
 })
 
-function loadSubjects(){
+function loadSubjects(): void{
     $("#loader-container").removeClass("hide");
     $("#ulQualifications").addClass("hide");
     $.ajax({
@@ -19,15 +20,15 @@ function loadSubjects(){
         url:"dist/js/al-subject-db.json",
         async:true,
         dataType: "json"
-    }).done(function(response){
-        var subjects = (response);
+    }).done((response)=>{
+        let subjects = (response);
 
         $("#loader-container").addClass("hide");
         $("#ulQualifications").removeClass("hide");
         $("#ulQualifications li").remove();
 
-        for(var index in subjects){
-            var subject = subjects[index];
+        for(let index in subjects){
+            let subject = subjects[index];
 
             if ($("#cmbQualification").val() == "all"){
                 $("#ulQualifications").append("<li><a href=\"al-" + subject.subject +".html\">" +  subject.subject + "</a></li>");
